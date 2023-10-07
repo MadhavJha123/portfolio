@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .project-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        margin-top: 40px;
+      }
+      .h1 {
+        margin-top: 25px;
+      }
+
+      .project-box {
+        width: 350px;
+        height: 300px;
+        background-color: #130c54;
+        border: 1px solid #eefa06;
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+        align-items: center;
+        justify-content: space-around;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project-box img {
+        width: 90%;
+        height: 80%;
+        margin-bottom: 10px;
+      }
+
+      .project-details-text {
+        display: none;
+        text-align: left;
+        color: white;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      /* Style for the Type.js text container */
+      .type-container {
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        width: 650px;
+        height: 300px;
+      }
+      /* Add this media query to target screens with a max width of 600px (typical phone screens) */
+@media only screen and (max-width: 600px) {
+  .project-container {
+    flex-direction: column; /* Stack project containers vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within project containers */
+    margin: 20px 0; /* Adjust margin for spacing */
+  }
+
+  .project-box {
+    width: 80%; /* Adjust the width of the project boxes */
+    margin: 0 auto 20px auto; /* Center and add margin to project boxes */
+  }
+
+  .project-box img {
+    width: 100%; /* Make the images take full width */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 10px;
+  }
+
+  .project-details-text {
+    display: block; /* Display project details text */
+  }
+
+  .type-container {
+    width: 100%; /* Make the type containers take full width */
+  }
+
+  .h1 {
+    margin-top: 10px; /* Adjust margin for the heading */
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <h1 style="color: rgb(244, 236, 5); margin-left: 25px">My Projects</h1>
+    <div class="project-container">
+      <div class="project-box">
+        <img src="assets/qs.png" alt="Blog Lite Logo" />
+        <div class="project-box-text">
+          <p style="color: white">Blog Lite</p>
+        </div>
+        <p
+          style="color: #eefa06; cursor: pointer; align-items: center"
+          id="pd1"
+        >
+          Show Details
+        </p>
+      </div>
+
+      <div class="type-container" id="type-container1">
+        <!-- Text will be typed here -->
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="project-box">
+        <img src="assets/qs.png" alt="Quantified Self Logo" />
+        <div class="project-box-text">
+          <p style="color: white">Quantified Self</p>
+        </div>
+        <p
+          style="color: #eefa06; cursor: pointer; align-items: center"
+          id="pd2"
+        >
+          Show Details
+        </p>
+      </div>
+      <div class="type-container" id="type-container2">
+        <!-- Text will be typed here -->
+      </div>
+    </div>
+
+    <!-- Include Type.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <script>
+              function startTyping(projectId, textContainerId) {
+                  const textContainer = document.getElementById(textContainerId);
+                  textContainer.style.display = 'block';
+
+                  let strings = [];
+                  if (projectId === 1) {
+                      strings = ["This is the details for Blog Lite.",` Built a blog lite app on which user can share their  posts and follow other users.
+                                A monthly designed pdf report is sent to user at the end of month including their posts description and activities across month.
+                                A daily reminder is sent to user in case when user forgets to use the app. 
+                                User authentication and authorization has been done to secure the data of users.
+                                ▪Technologies used: HTML, CSS, Vue.js, Celery, Redis, Flask, SQL Alchemy, RestAPIs, Flask security, Postman
+                                
+                                `];
+                  } else if (projectId === 2) {
+                      strings = ["This is the details for Quantified Self.", `Built a tracker app on which user can track their daily tasks and have a look on their daily logged tracker’s graph.
+                                    ▪ Technologies used: HTML, CSS, JavaScript, Flask, Matplotlib
+                                    `];
+                  }
+
+                  const options = {
+                      strings: strings,
+                      typeSpeed: 10, // Typing speed in milliseconds
+                    //   backSpeed: 25, // Backspacing speed in milliseconds
+                  };
+
+                  new Typed(`#${textContainerId}`, options);
+              }
+
+              // Add click event listeners to the project detail buttons
+              document.getElementById('pd1').addEventListener('click', () => {
+                  startTyping(1, 'type-container1');
+                  document.getElementById('pd1').style.display = 'none'; // Hide the button
+              });
+
+              document.getElementById('pd2').addEventListener('click', () => {
+                  startTyping(2, 'type-container2');
+                  document.getElementById('pd2').style.display = 'none'; // Hide the button
+              });
+    </script>
+  </body>
+</html>

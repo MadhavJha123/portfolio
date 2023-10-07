@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Use the same style.css you provided -->
+    <style>
+      /* Additional CSS for Contact Me section */
+      .contact-section {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+
+      .contact-links {
+        display: flex;
+        flex-direction: column; /* Arrange icons vertically */
+        align-items: center;
+        gap: 50px;
+      }
+
+      .contact-links a {
+        text-decoration: none;
+        font-size: 36px; /* Increase icon size */
+        color: rgb(244, 236, 5);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .contact-links a:hover {
+        transform: scale(1.2);
+      }
+      @media only screen and (max-width: 600px) {
+    .contact-links {
+        gap: 20px; /* Reduce the gap between icons for better spacing on phone screens */
+    }
+
+    .contact-links a {
+        font-size: 24px; /* Decrease the icon size for phone screens */
+    }
+
+    .contact-section {
+        padding: 20px; /* Reduce the padding for phone screens */
+    }
+}
+    </style>
+  </head>
+  <body>
+    <header class="contact-section">
+      <h1 style="color:white">Contact Me</h1>
+      <div class="contact-links">
+        <a
+          href="https://www.linkedin.com/in/madhav-kumar-4205b7233"
+          class="fa fa-linkedin"
+          style="margin-top: 50px"
+        ></a>
+        <a href="https://github.com/MadhavJha123" class="fa fa-github"></a>
+        <a
+          href="https://www.instagram.com/madhav.__jha/"
+          class="fa fa-instagram"
+        ></a>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Additional CSS for My Skills section */
+        .skills-section {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .skill-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill-box {
+            width: calc(15% - 20px); /* Adjust the width as needed */
+            background-color: rgb(18, 18, 80);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .skill-box:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-logo {
+            width: 100px; /* Adjust the logo size as needed */
+            margin: 10px auto;
+        }
+        @media only screen and (max-width: 600px) {
+    .skill-boxes {
+        flex-direction: column; /* Stack skill boxes vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .skill-box {
+        width: calc(50% - 20px);
+        margin: 10px auto; 
+    }
+
+    .skills-section {
+        padding: 20px; /* Reduce the padding for phone screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="skills-section">
+        <h1 style="color:rgb(244, 236, 5)">My Skills</h1>
+        <div class="skill-boxes">
+            <div class="skill-box" style="margin-top: 30px;">
+                <img src="assets/python.png" alt="Python Logo" class="skill-logo" >
+                <p>Python</p>
+            </div>
+            <div class="skill-box"style="margin-top: 30px;">
+                <img src="assets/flask-logo.png" alt="Flask Logo" class="skill-logo">
+                <p>Flask</p>
+            </div>
+            <div class="skill-box"style="margin-top: 30px;">
+                <img src="assets/html.png" alt="HTML Logo" class="skill-logo">
+                <p>HTML</p>
+            </div>
+            <div class="skill-box"style="margin-top: 30px;">
+                <img src="assets/css.png" alt="CSS Logo" class="skill-logo">
+                <p>CSS</p>
+            </div>
+            <div class="skill-box"style="margin-top: 30px;">
+                <img src="assets/javascript.png" alt="JavaScript Logo" class="skill-logo">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/sql.png" alt="SQL Logo" class="skill-logo">
+                <p>SQL</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/vue.png" alt="Vue Logo" class="skill-logo">
+                <p>Vue Js</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/fastapi.png" alt="Fastapi Logo" class="skill-logo">
+                <p>FastApi</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/celery.png" alt="celery Logo" class="skill-logo">
+                <p>Celery</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/redis.png" alt="redis Logo" class="skill-logo">
+                <p>Redis</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/mongodb.png" alt="mongodb Logo" class="skill-logo">
+                <p>Mongo DB</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/postgresql.png" alt="postgresql Logo" class="skill-logo">
+                <p>PostgreSQL</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/git.png" alt="SQL Logo" class="skill-logo">
+                <p>Git</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/seaborn.png" alt="Seaborn Logo" class="skill-logo">
+                <p>Seaborn</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/sklearn.png" alt="sklearn Logo" class="skill-logo">
+                <p>ScikitLearn</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/numpy.png" alt="numpy Logo" class="skill-logo">
+                <p>Numpy</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/pandas.png" alt="pandas Logo" class="skill-logo">
+                <p>Pandas</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/linux.png" alt=" linux Logo" class="skill-logo">
+                <p>Linux</p>
+            </div>
+            <div class="skill-box">
+                <img src="assets/django.png" alt="django Logo" class="skill-logo">
+                <p>Django</p>
+            </div>
+
+            <!-- Add more skills as needed -->
+        </div>
+    </header>
+    <div class="certification">
+        <h1 style="color:rgb(244, 236, 5)">My Certifications</h1>
+        <div class="certificate-box">
+            <!-- Certificate 1 content goes here -->
+            <img src="assets/dp.png" alt="">
+
+        </div>
+        <div class="certificate-box">
+            <!-- Certificate 2 content goes here -->
+            <img src="assets/fc.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          Madhav's <span style="color: rgb(255, 255, 0)">Portfolio</span>
+        </div>
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href=""><span style="color: rgb(244, 236, 5) ;">Home</span></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hii,&#128075; I am <span style="color: yellow">Madhav</span>
+          <div>
+            and I am a Passionate
+            <p><span id="element"></span></p>
+          </div>
+        </div>
+        <div class="rightsection">
+          <img src="assets/dev.png" alt="" srcset="" />
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Frontend Developer",
+          "Data Analyst&#128202;",
+          "&amp; Python Developer&#128187;",
+        ],
+        typeSpeed: 50,
+      });
+      // JavaScript to toggle the menu icon and navigation link
+
+    </script>
+    <script>
+    document.querySelector('.menu-icon').addEventListener('click', () => {
+      document.querySelector('.menu-icon i').classList.toggle('active');
+      document.querySelector('.right ul').classList.toggle('active');
+    });
+
+
+    </script>
+  </body>
+</html>
